@@ -1,0 +1,5 @@
+integrate jfoenix with the project.
+jfoenix-9.0.1.jar
+
+IDE : IntelliJ.
+JDK : v9
