@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="765.0" style="-fx-background-color: #2b3a42;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usthb.modeles.FXMLs.ControllerLogIn">
+   <children>
+      <ImageView fitHeight="213.0" fitWidth="193.0" layoutX="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../iCons/Logo.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="548.0" layoutY="10.0" spacing="20.0">
+         <children>
+            <Label prefHeight="29.0" prefWidth="101.0" text="Pas membre?" textFill="#efefef">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#ChangeToSignUp" ripplerFill="WHITE" style="-fx-background-color: #FF530D;" text="S'inscrire" textFill="#efefef">
+               <font>
+                  <Font name="NexaBold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Pane layoutX="213.0" layoutY="193.0">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iCons/Login-page-user.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="username" focusColor="#efefef" layoutX="86.0" layoutY="2.0" prefHeight="42.0" prefWidth="254.0" promptText="Username" style="-fx-prompt-text-fill: #efefef; -fx-text-inner-color: #efefef;" unFocusColor="#bdd4de" viewOrder="1.0">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <padding>
+            <Insets bottom="30.0" />
+         </padding>
+      </Pane>
+      <Pane layoutX="213.0" layoutY="270.0">
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iCons/Login-page-password.png" />
+               </image>
+            </ImageView>
+            <JFXPasswordField fx:id="password" focusColor="#efefef" layoutX="86.0" layoutY="3.0" prefHeight="42.0" prefWidth="254.0" promptText="Password" style="-fx-text-inner-color: #efefef; -fx-prompt-text-fill: #efefef;" unFocusColor="#bdd4de">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </JFXPasswordField>
+         </children>
+         <padding>
+            <Insets bottom="40.0" />
+         </padding>
+      </Pane>
+      <JFXButton defaultButton="true" layoutX="327.0" layoutY="357.0" onAction="#Connect" ripplerFill="WHITE" style="-fx-background-color: #FF530D;" text="Se connecter" textFill="#efefef">
+         <font>
+            <Font name="NexaBold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="errorMessage" layoutX="357.0" layoutY="422.0" prefHeight="24.0" prefWidth="53.0" text="Error" textFill="#ff530d" visible="false">
+         <font>
+            <Font name="NexaBold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

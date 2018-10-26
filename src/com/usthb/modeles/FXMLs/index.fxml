@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #bdd4de;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usthb.modeles.FXMLs.ControllerIndex">
+   <children>
+      <Pane prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #3F5765;">
+         <children>
+            <ImageView fitHeight="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iCons/Logo_noText.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="151.0" layoutY="10.0">
+               <children>
+                  <JFXTextField fx:id="search" focusColor="#efefef" prefHeight="38.0" prefWidth="200.0" promptText="Rechercher par username" style="-fx-prompt-text-fill: #efefef; -fx-text-inner-color: #efefef;" unFocusColor="#efefef">
+                     <font>
+                        <Font name="NexaLight" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="goSearch" defaultButton="true" onAction="#search" prefHeight="40.0" prefWidth="41.0" ripplerFill="WHITE" style="-fx-background-color: #efefef;" text="GO!" textFill="#3f5765" viewOrder="1.0">
+                     <font>
+                        <Font name="NexaLight" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox layoutX="532.0" layoutY="9.0" spacing="5.0">
+               <children>
+                  <JFXButton fx:id="name" onAction="#showProfile" prefHeight="38.0" prefWidth="235.0" text="Nom Prenom" textFill="#efefef" viewOrder="1.0">
+                     <font>
+                        <Font name="NexaLight" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton onAction="#showInvitations" prefHeight="38.0" prefWidth="7.0" ripplerFill="WHITE" text=" " textFill="#efefef" viewOrder="1.0">
+                     <font>
+                        <Font name="NexaLight" size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iCons/index-page-friends.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#showNotifications" prefHeight="42.0" prefWidth="28.0" ripplerFill="WHITE" text=" " textFill="#efefef" viewOrder="1.0">
+                     <font>
+                        <Font name="NexaLight" size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iCons/index-page-notifications.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="disconnect" onAction="#disconnect" prefHeight="38.0" prefWidth="125.0" ripplerFill="WHITE" style="-fx-background-color: #FF530D;" text="Se Déconnecter" textFill="#efefef" viewOrder="1.0">
+                     <font>
+                        <Font name="NexaBold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow color="#2b3a42" height="20.0" radius="9.5" width="20.0" />
+         </effect>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </Pane>
+      <Label fx:id="numberNotifications" layoutX="840.0" layoutY="30.0" onMouseClicked="#showNotifications" style="-fx-background-color: #FF530D; -fx-background-radius: 40;" text=" 0 " textFill="#efefef" />
+      <Label fx:id="numberInvitations" layoutX="795.0" layoutY="31.0" onMouseClicked="#showInvitations" style="-fx-background-color: #FF530D; -fx-background-radius: 40;" text=" 0 " textFill="#efefef" />
+      <Pane fx:id="mainProfilePane" layoutY="60.0" prefHeight="65.0" prefWidth="1000.0">
+         <children>
+            <HBox layoutY="14.0" spacing="20.0">
+               <children>
+                  <Label fx:id="nameProfile" prefHeight="38.0" text="Nom Prenom" textFill="#2b3a42">
+                     <font>
+                        <Font name="NexaLight" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="addFriend" onAction="#addFriend" prefHeight="38.0" prefWidth="0.0" ripplerFill="#2b3a42" textFill="#efefef" viewOrder="200.0">
+                     <font>
+                        <Font name="NexaLight" size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iCons/index-page-add-friend-dark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="deleteFriend" onAction="#deleteFriend" prefHeight="38.0" prefWidth="0.0" ripplerFill="#2b3a42" textFill="#efefef" viewOrder="200.0">
+                     <font>
+                        <Font name="NexaLight" size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iCons/index-page-delete-friend-dark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="130.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="821.0" layoutY="14.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="wall" onAction="#showWallPane" prefHeight="38.0" prefWidth="4.0" ripplerFill="#2b3a42" textFill="#efefef" viewOrder="1.0">
+                     <font>
+                        <Font name="NexaLight" size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iCons/index-page-wall-dark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="friends" onAction="#showFriendsPane" prefHeight="38.0" prefWidth="7.0" ripplerFill="#2b3a42" text=" " textFill="#efefef" viewOrder="1.0">
+                     <font>
+                        <Font name="NexaLight" size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iCons/index-page-friends-dark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="about" onAction="#showAboutPane" prefHeight="38.0" prefWidth="7.0" ripplerFill="#2b3a42" text=" " textFill="#efefef" viewOrder="1.0">
+                     <font>
+                        <Font name="NexaLight" size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iCons/index-page-about-dark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets right="20.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox fx:id="confirmAdd" layoutX="388.0" layoutY="13.0">
+               <children>
+                  <JFXTextField fx:id="requestMessage" focusColor="#2b3a42" prefHeight="38.0" prefWidth="200.0" promptText="Message" style="-fx-prompt-text-fill: #2b3a42; -fx-text-inner-color: #2b3a42;" unFocusColor="#2b3a42">
+                     <font>
+                        <Font name="NexaLight" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="validateAdd" onAction="#validateAdd" prefHeight="40.0" ripplerFill="WHITE" style="-fx-background-color: #2b3a42;" text="Envoyer" textFill="#efefef" viewOrder="1.0">
+                     <font>
+                        <Font name="NexaLight" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Separator layoutY="125.0" prefHeight="13.0" prefWidth="1000.0" style="-fx-background-color: #efefef;">
+         <opaqueInsets>
+            <Insets left="20.0" right="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+         </padding>
+      </Separator>
+      <Pane fx:id="wallPane" layoutY="138.0" prefHeight="512.0" prefWidth="1000.0" style="-fx-background-color: #efefef;">
+         <children>
+            <HBox fx:id="publicationBox" prefWidth="1000.0">
+               <children>
+                  <JFXComboBox fx:id="viewLevelBox" focusColor="#2b3a42" prefHeight="48.0" prefWidth="100.0" promptText="public" unFocusColor="#2b3a42">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </JFXComboBox>
+                  <JFXTextArea fx:id="publicationContent" focusColor="#2b3a42" prefHeight="45.0" prefWidth="790.0" promptText="What's on your mind ?" unFocusColor="#2b3a42">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="NexaLight" size="15.0" />
+                     </font>
+                  </JFXTextArea>
+                  <JFXButton fx:id="publish" onAction="#publish" prefHeight="50.0" style="-fx-background-color: #2b3a42;" text="Publier" textFill="#efefef">
+                     <font>
+                        <Font name="NexaBold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+            <JFXListView fx:id="publications" layoutY="64.0" prefHeight="447.0" prefWidth="1000.0" style="-fx-background-color: #efefef; -jfx-cell-vertical-margin: 0; -jfx-cell-horizontal-margin: 0;" />
+         </children>
+      </Pane>
+      <Pane fx:id="friendsPane" layoutY="138.0" prefHeight="512.0" prefWidth="1000.0" style="-fx-background-color: #efefef;" visible="false">
+         <children>
+            <Label layoutY="1.0" prefHeight="50.0" prefWidth="95.0" text="Amis" textFill="#2b3a42">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="NexaBold" size="25.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="friendsList" layoutY="51.0" prefHeight="462.0" prefWidth="1000.0" style="-fx-background-color: #efefef;" />
+         </children>
+      </Pane>
+      <Pane fx:id="aboutPane" layoutY="138.0" prefHeight="512.0" prefWidth="1000.0" style="-fx-background-color: #efefef;" visible="false">
+         <children>
+            <VBox layoutX="36.0" layoutY="94.0" spacing="15.0">
+               <children>
+                  <Label fx:id="aboutSpecialite" text="Specialite:">
+                     <font>
+                        <Font name="NexaLight" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="aboutNiveau" text="Niveau:">
+                     <font>
+                        <Font name="NexaLight" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="aboutFonction" text="Fonction:">
+                     <font>
+                        <Font name="NexaLight" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="aboutDateDeNaissance" text="Date de naissance-Age:">
+                     <font>
+                        <Font name="NexaLight" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="aboutSexe" text="Sexe:">
+                     <font>
+                        <Font name="NexaLight" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="errorMessagePane" layoutY="60.0" prefHeight="590.0" prefWidth="1000.0" style="-fx-background-color: #efefef;" visible="false">
+         <children>
+            <Label fx:id="errorMessage" alignment="CENTER" layoutX="372.0" layoutY="133.0" text="Utilisateur non trouvé" textFill="#ff530d">
+               <font>
+                  <Font name="NexaBold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="invitationsPane" layoutX="716.0" layoutY="60.0" opacity="0.8" prefHeight="540.0" prefWidth="270.0" style="-fx-background-color: #3F5765;" visible="false">
+         <children>
+            <Label layoutX="88.0" prefHeight="40.0" text="Invitations" textFill="#efefef">
+               <font>
+                  <Font name="NexaLight" size="20.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="invitations" layoutY="40.0" prefHeight="500.0" prefWidth="270.0" style="-fx-background-color: #3F5765;" />
+         </children>
+      </Pane>
+      <Pane fx:id="notificationsPane" layoutX="716.0" layoutY="60.0" opacity="0.8" prefHeight="540.0" prefWidth="270.0" style="-fx-background-color: #3F5765;" visible="false">
+         <children>
+            <Label layoutX="77.0" prefHeight="40.0" text="Notifications" textFill="#efefef">
+               <font>
+                  <Font name="NexaLight" size="20.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="notifications" layoutY="40.0" prefHeight="500.0" prefWidth="270.0" style="-fx-background-color: #3F5765;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

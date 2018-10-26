@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="240.0" style="-fx-background-color: #3F5765;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usthb.modeles.FXMLs.ControllerNotification">
+   <children>
+      <VBox>
+         <children>
+            <Label fx:id="notificationContent" prefWidth="200.0" text="Ilyes Yamoun aaa a réagi a votre publication." textFill="#efefef" wrapText="true">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="status" text="Lue" textFill="#bdd4de" wrapText="true">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ImageView fx:id="reaction" fitWidth="40.0" layoutX="200.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../iCons/index-page-notification-reaction.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="comment" fitWidth="40.0" layoutX="200.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../iCons/index-page-notification-comment.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="post" fitWidth="40.0" layoutX="200.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../iCons/index-page-notification-publication.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

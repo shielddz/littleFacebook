@@ -1,0 +1,7 @@
+Colors used:
+dark background used in the login:#2b3a42
+used in main banner of the index:#3F5765
+used in the profile banner of the index:#bdd4de
+white greyish color used in almost all the text fields:#efefef
+the red-orange color used in some buttons ( connect, disconnect, signup ) and in error messages:#FF530D
+green color used in (online button image, accepted request label ) and in accept-request button:#01942E

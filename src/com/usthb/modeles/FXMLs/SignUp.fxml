@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="776.0" style="-fx-background-color: #2b3a42;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usthb.modeles.FXMLs.ControllerSignUp">
+   <children>
+      <ImageView fitHeight="213.0" fitWidth="193.0" layoutX="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../iCons/Logo.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="527.0" layoutY="10.0" spacing="20.0">
+         <children>
+            <Label prefHeight="29.0" prefWidth="106.0" text="Déja membre?" textFill="#efefef">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#ChangeToLogIn" ripplerFill="WHITE" style="-fx-background-color: #FF530D;" text="Se connecter" textFill="#efefef">
+               <font>
+                  <Font name="NexaBold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Separator layoutX="340.0" layoutY="193.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0">
+         <padding>
+            <Insets left="40.0" right="40.0" />
+         </padding></Separator>
+      <VBox layoutX="589.0" layoutY="373.0" prefHeight="52.0" prefWidth="86.0" spacing="10.0">
+         <children>
+            <JFXRadioButton fx:id="homme" text="Homme" textFill="#bdd4de">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Sexe" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="femme" prefHeight="21.0" prefWidth="97.0" text="Femme" textFill="#ff530d" toggleGroup="$Sexe">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXRadioButton>
+         </children>
+      </VBox>
+      <JFXDatePicker fx:id="date" defaultColor="#efefef" layoutX="428.0" layoutY="373.0" prefHeight="52.0" prefWidth="164.0" promptText="Date de naissance" style="-jfx-default-color: #efefef; -jfx-unfocus-color: #efefef; -fx-text-inner-color: #efefef;" />
+      <JFXButton defaultButton="true" layoutX="600.0" layoutY="436.0" onAction="#SignUp" ripplerFill="WHITE" style="-fx-background-color: #FF530D;" text="S'inscrire" textFill="#efefef">
+         <font>
+            <Font name="NexaBold" size="15.0" />
+         </font>
+      </JFXButton>
+      <VBox layoutX="86.0" layoutY="193.0" spacing="15.0">
+         <children>
+            <JFXTextField fx:id="nom" focusColor="#efefef" prefHeight="42.0" prefWidth="254.0" promptText="Nom" style="-fx-prompt-text-fill: #efefef; -fx-text-inner-color: #efefef;" unFocusColor="#bdd4de" viewOrder="1.0">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="prenom" focusColor="#efefef" prefHeight="42.0" prefWidth="254.0" promptText="Prenom" style="-fx-prompt-text-fill: #efefef; -fx-text-inner-color: #efefef;" unFocusColor="#bdd4de" viewOrder="1.0">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="username" focusColor="#efefef" prefHeight="42.0" prefWidth="254.0" promptText="Username" style="-fx-prompt-text-fill: #efefef; -fx-text-inner-color: #efefef;" unFocusColor="#bdd4de" viewOrder="1.0">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="#efefef" prefHeight="42.0" prefWidth="254.0" promptText="Password" style="-fx-text-inner-color: #efefef; -fx-prompt-text-fill: #efefef;" unFocusColor="#bdd4de" viewOrder="1.0">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </JFXPasswordField>
+         </children>
+      </VBox>
+      <VBox layoutX="426.0" layoutY="195.0" spacing="15.0">
+         <children>
+            <JFXTextField fx:id="specialite" focusColor="#efefef" prefHeight="42.0" prefWidth="254.0" promptText="Spécialité" style="-fx-prompt-text-fill: #efefef; -fx-text-inner-color: #efefef;" unFocusColor="#bdd4de" viewOrder="1.0">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="fonction" focusColor="#efefef" prefHeight="42.0" prefWidth="254.0" promptText="Fonction" style="-fx-prompt-text-fill: #efefef; -fx-text-inner-color: #efefef;" unFocusColor="#bdd4de" viewOrder="1.0">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="niveau" focusColor="#efefef" prefHeight="42.0" prefWidth="254.0" promptText="Niveau" style="-fx-prompt-text-fill: #efefef; -fx-text-inner-color: #efefef;" unFocusColor="#bdd4de" viewOrder="1.0">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="15.0" />
+         </opaqueInsets>
+      </VBox>
+      <Label fx:id="error" layoutX="352.0" layoutY="449.0" text="Error" textFill="#ff530d" visible="false">
+         <font>
+            <Font name="NexaBold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

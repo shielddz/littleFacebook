@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="750.0" style="-fx-background-color: efefef;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usthb.modeles.FXMLs.ControllerPublication">
+   <children>
+      <HBox spacing="10.0">
+         <children>
+            <Label fx:id="publisher" prefHeight="27.0" text="Nom Prenom" textFill="#3f5765">
+               <font>
+                  <Font name="NexaBold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="level" prefHeight="27.0" text="niveau" textFill="#2b3a42">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="pinned" prefHeight="27.0" textFill="#2b3a42">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="content" layoutY="27.0" prefHeight="68.0" prefWidth="750.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry." textAlignment="JUSTIFY" textFill="#2b3a42" wrapText="true" AnchorPane.leftAnchor="0.0">
+         <font>
+            <Font name="NexaLight" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutY="94.0" prefWidth="740.0" AnchorPane.leftAnchor="0.0">
+         <padding>
+            <Insets bottom="5.0" left="10.0" top="5.0" />
+         </padding>
+      </Separator>
+      <HBox layoutY="107.0" prefHeight="32.0" prefWidth="700.0" spacing="10.0">
+         <children>
+            <JFXButton fx:id="like" onAction="#like" prefHeight="41.0" prefWidth="30.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iCons/reactions/jaime.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="nLike" prefHeight="35.0" text="0" textFill="#2b3a42">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="love" onAction="#love" prefHeight="41.0" prefWidth="30.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iCons/reactions/jadore.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="nLove" prefHeight="35.0" text="0" textFill="#2b3a42">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="gai" onAction="#gai" prefHeight="41.0" prefWidth="30.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iCons/reactions/gai.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="nGai" prefHeight="35.0" text="0" textFill="#2b3a42">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="sad" onAction="#sad" prefHeight="41.0" prefWidth="30.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iCons/reactions/triste.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="nSad" prefHeight="35.0" text="0" textFill="#2b3a42">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="angry" onAction="#angry" prefHeight="41.0" prefWidth="30.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iCons/reactions/encolere.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="nAngry" prefHeight="35.0" text="0" textFill="#2b3a42">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="viewLevelBox" focusColor="#2b3a42" prefWidth="100.0" promptText="public" unFocusColor="#2b3a42">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </JFXComboBox>
+            <JFXButton onAction="#share" prefHeight="41.0" prefWidth="89.0" style="-fx-background-color: #bdd4de;" text="Partager." textFill="#2b3a42">
+               <font>
+                  <Font name="NexaBold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="shares" prefHeight="35.0" text="123 Partages." textFill="#2b3a42">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="5.0" layoutY="141.0" prefWidth="740.0">
+         <padding>
+            <Insets bottom="5.0" left="10.0" top="5.0" />
+         </padding>
+      </Separator>
+      <HBox layoutY="154.0" prefHeight="27.0" prefWidth="750.0">
+         <children>
+            <JFXTextField fx:id="commentContent" focusColor="#2b3a42" prefHeight="29.0" prefWidth="654.0" promptText="Ecrivez un commentaire" unFocusColor="#2b3a42">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </JFXTextField>
+            <JFXButton fx:id="submitComment" onAction="#submitComment" prefHeight="30.0" prefWidth="79.0" text="Commenter" />
+         </children>
+      </HBox>
+      <Separator layoutX="5.0" layoutY="190.0" prefWidth="740.0">
+         <padding>
+            <Insets bottom="5.0" left="10.0" top="5.0" />
+         </padding>
+      </Separator>
+      <JFXListView fx:id="comments" layoutY="203.0" prefHeight="400.0" prefWidth="750.0" style="-fx-background-color: #efefef;" />
+      <JFXButton fx:id="pin" layoutX="645.0" layoutY="2.0" onAction="#pin" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: #bdd4de;" text="Epingler" textFill="#2b3a42">
+         <font>
+            <Font name="NexaBold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

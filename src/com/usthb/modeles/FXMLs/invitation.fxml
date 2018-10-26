@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="240.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usthb.modeles.FXMLs.ControllerInvitation">
+   <children>
+      <Label fx:id="name" text="Nom Prenom" textFill="#2b3a42">
+         <font>
+            <Font name="NexaBold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="message" layoutY="9.0" text="Lorem Ipsum text text">
+         <font>
+            <Font name="NexaLight" size="15.0" />
+         </font>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </Label>
+      <Pane fx:id="status" layoutX="172.0">
+         <children>
+            <Label fx:id="declined" layoutX="9.1199951171875" text="Refusée" textFill="#ff530d">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="accepted" layoutX="0.1199951171875" text="Acceptée" textFill="#01942e">
+               <font>
+                  <Font name="NexaLight" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox fx:id="action" layoutY="42.0" spacing="10.0" visible="false">
+         <children>
+            <JFXButton fx:id="accept" onAction="#accept" prefHeight="39.0" prefWidth="23.0">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iCons/index-page-validate.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="decline" onAction="#decline" prefHeight="39.0" prefWidth="23.0">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iCons/index-page-deline.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
